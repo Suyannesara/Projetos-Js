@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto 3</title>
+</head>
+<body>
+  <input id="campo" type="text" placeholder="Nome">
+  <input id="botao" type="submit" value="Exibir Nome">
+
+  <script>
+    //1º - Ouvir que tipo de evento está acontecendo
+    //2º - Se o evento acontecer, realizar a função
+    document.getElementById('botao').addEventListener("click", function () {
+      const nomeCompleto = document.getElementById('campo').value;
+
+      //Número de letras em uma palavra
+      var qtdletras = nomeCompleto.length;
+
+      //Alerta com concatenação
+      alert("Seu nome completo é: " + nomeCompleto + "// " + qtdletras);
+    }
+    );
+
+
+/*
+    document.getElementById('campo').addEventListener("click");
+
+    function alertar(){
+      const nome = document.getElementById('campo').value;
+      alert("Seu nome completo é: " + nome)
+    };*/
+  </script>
+</body>
+</html>
