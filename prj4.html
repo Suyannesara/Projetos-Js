@@ -5,15 +5,99 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .text h2{
+      font-size: 50px;
+    }
+
+    .text h3{
+      font-size: 30px;
+      font-weight: 400;
+
+      text-align: right;
+    }
+    .maincontent{
+      display: flex;
+      flex-direction: column;
+    }
+
+    img, .button{
+      align-self: center;
+    }
+
+    input{
+      margin: 20px;
+      padding: 12px;
+      font-size: 24px;
+      align-self: center;
+
+      border: none;
+      border-radius: 2px;
+      background-color: gold;
+      cursor: pointer;
+    }
+
+    input:hover{
+      background-color: gray;
+      transition: 500ms;
+    }
+
+    .maincontent .rodape{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 15px;
+    }
+
+    .maincontent .rodape img{
+      width: 60px;
+      margin-left: 10px;
+
+      border-radius: 80px;
+    }
+
+
+  </style>
 </head>
 <body>
 
-  <img width="500px" id="apagada" src="https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true" alt="Lampada apagada"> <br>
+  <div class="text">
+    <h2>Código da luz</h2>
+    <h3>que acende e apaga</h3>
+  </div>
+ 
+  <div class="maincontent">
+    <img width="500px" id="apagada" src="https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true" alt="Lampada apagada"> <br>
   
-  <input type="submit" value="Acender" onclick="acender()">
+    <div class="button">
+      <input type="submit" value="Acender" onclick="acender()">
 
-  <input type="submit" value="Apagar" onclick="apagar()">
+      <input type="submit" value="Apagar" onclick="apagar()">
+    </div>
 
+    <div class="rodape">
+      <p> © all rights reserved - Suyanne Miranda </p>
+      <img src="https://avatars.githubusercontent.com/u/66568437?v=4" alt="">
+    </div>
+    
+  </div>
+  
+ 
   <script src="/projeto4.js"></script>
   
 </body>
