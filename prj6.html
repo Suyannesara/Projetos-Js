@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOMA</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html{
+      height: 100%;
+    }
+    
+    body{
+      width: 100%;
+      height: 100%;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    form{
+      width: 50%;
+ 
+    }
+  </style>
+</head>
+<body>
+
+  <form action="#resultado-soma">
+    <label > Insira o 2 valor: <br>
+      <input required type="text" id="soma1"> <br>
+    </label>
+
+    <label > Insira o 2 valor: <br>
+      <input required type="text" id="soma2"> <br>
+    </label>
+
+    <button onclick="somar()" id="btn-soma">Enviar</button> <br>
+  </form>
+
+  <label> Resultado soma: <br>
+    <input value="" type="text" id="resultado-soma"> <br>
+  </label> 
+
+  <br> 
+  
+  <script src="/JavaScript/ProjetosJS/prj6.js"></script>
+
+</body>
+</html>

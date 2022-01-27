@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUDAR COR</title>
+
+  <style>
+    button{
+      padding: 10px;
+
+      font-size: 24px;
+
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    #verde:hover{
+      background-color: green;
+      transition: 500ms;
+    }
+
+    #vermelho:hover{
+      background-color: red;
+      transition: 500ms;
+    }
+
+  </style>
+</head>
+<body>
+   
+  <button onclick="mudarCorVerde()" id="verde">Verde</button>
+  <button onclick="mudarCorVermelho()" id="vermelho">Vermelho</button> <BR></BR>
+
+  <!-- <div id="resultado"></div> -->
+
+  <input onclick="mostrarTexto()" type="submit" id="resultado">
+
+  <script src="/JavaScript/ProjetosJS/prj7.js"></script>
+  
+</body>
+</html>
