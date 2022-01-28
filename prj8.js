@@ -3,20 +3,13 @@
 let resto = 5 % 2;
 console.log(resto);*/
 
-function igualdade(inteiro){
-  if (inteiro % 2 == 0) {
-    return inteiro = (`O NÚMERO ${x} É PAR, BÊBÊ!`);
-  
-  }else{
-    return inteiro (`O NÚMERO ${x} É ÍMPAR, BÊBÊ!`);
-  };
-  
-}
+/*USANDO PROMPT E IF */
+var n1 = prompt("Digite um número: ");
 
 
-if (x % 2 == 0) {
-  console.log(`O NÚMERO ${x} É PAR, BÊBÊ!`);
+if (n1 % 2 == 0) {
+  alert(`O NÚMERO ${n1} É PAR, BÊBÊ!`);
 
 }else{
-  console.log(`O NÚMERO ${x} É ÍMPAR, BÊBÊ!`);
+  alert(`O NÚMERO ${n1} É ÍMPAR, BÊBÊ!`);
 };
