@@ -72,19 +72,29 @@
     alert("Your salary this month is: " + salary);
     
 
-    /* N9 - */
-    var n1 = parseFloat(prompt("Tell me the first number: "));
-    var n2 = parseFloat(prompt("Tell me the second number: "));
+    /* N9 - 
+    var number = parseInt(prompt("Write a number: "));
 
-    if ((n1 == 100) || (n2 == 100)){
-      return('true')
+    if (number % 2 == 0){
+      alert("This number is even")
+    }else{
+      alert("This number is odd")
+    } */
+
+    /* N10 -
+    var mass = parseFloat(prompt("Write your body mass: "));
+    var height = parseFloat(prompt("Write your body height: "));
+    var imc = mass / (height**2)
+
+    if (imc >= 18.5 && imc <= 25){
+      alert("You're in your ideal weight!")
     } 
-    else if (n1 + n2 == 100){
-      return('true')
-    } 
-    else {
-      return('false')
+    else if (imc < 18.5){
+      alert("You're under your ideal weight")
     }
+    else{
+      alert("You're above your ideal weight")
+    }*/
 
   </script>
 </body>

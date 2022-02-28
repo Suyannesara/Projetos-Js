@@ -1,17 +1,14 @@
-/*Ask the user n1 and
-read n1 and n2
-pass n1 and n2 from string -> number */
+//Ask the user for a number
+var number = parseInt(propmpt("Write a number: "));
 
-var n1 = parseFloat(prompt("Tell me the first number: "));
-var n2 = parseFloat(prompt("Tell me the second number: "));
-
-if (n1 | n2 == 100){
-  return(true)
-} 
-else if (n1 + n2 == 100){
-  return(true)
-} 
-else {
-  return(false)
+// If even or odd
+//Show the user
+if (number % 2 == 0){
+  alert("This number is even")
+}else{
+  alert("This number is odd")
 }
+
+
+
 
