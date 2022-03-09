@@ -9,7 +9,7 @@
 <body>
   <input type="number" id="n1">
   <input type="number" id="n2">
-  <input type="number" id="rs">
+  <input type="number" id="rs" disabled>
 
   <input type="button" onclick="executarOperacao(somar)" value="somar">
   <input type="button" onclick="executarOperacao(subtrair)" value="subtrair">
@@ -35,12 +35,26 @@
     }
 
     //Call back com js
-    function executarOperacao(func){
+    function executarOperacao(funcao){
+      document.getElementById('rs').value = "";
       let n1 = Number(document.getElementById('n1').value);
       let n2 = Number(document.getElementById('n2').value);
+      let rs = funcao(n1, n2)
+      let campoVazio = "";
 
-      document.getElementById('rs').value = func(n1 , n2)
-    }
+      if (n1 == 0){
+        campoVazio = 'n1';
+      }
+      if(n2 == 0){
+        campoVazio += 'n2';
+      }
+
+      if (campoVazio == ""){
+        document.getElementById('rs').value = rs;
+      }else{
+        alert("Você tem que preencher " + campoVazio)
+      }
+
 
   </script>
 </body>
