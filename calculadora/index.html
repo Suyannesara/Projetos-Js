@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" id="n1">
+  <input type="number" id="n2">
+  <input type="number" id="rs">
+
+  <input type="button" onclick="executarOperacao(somar)" value="somar">
+  <input type="button" onclick="executarOperacao(subtrair)" value="subtrair">
+  <input type="button" onclick="executarOperacao(multiplicar)" value="multiplicar">
+  <input type="button" onclick="executarOperacao(dividir)" value="dividir">
+
+  <script>
+
+    function somar(n1, n2){
+      return n1 + n2
+    }
+
+    function subtrair(n1, n2){
+      return n1 - n2
+    }
+
+    function multiplicar(n1, n2){
+      return n1 * n2
+    }
+
+    function dividir(n1, n2){
+      return n1 / n2
+    }
+
+    //Call back com js
+    function executarOperacao(func){
+      let n1 = Number(document.getElementById('n1').value);
+      let n2 = Number(document.getElementById('n2').value);
+
+      document.getElementById('rs').value = func(n1 , n2)
+    }
+
+  </script>
+</body>
+</html>
