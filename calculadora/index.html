@@ -8,18 +8,20 @@
 </head>
 <body>
   <input type="number" id="n1">
+  <span id="sinal">X</span>
   <input type="number" id="n2">
   <input type="number" id="rs" disabled>
 
-  <input type="button" onclick="executarOperacao(somar)" value="somar">
-  <input type="button" onclick="executarOperacao(subtrair)" value="subtrair">
-  <input type="button" onclick="executarOperacao(multiplicar)" value="multiplicar">
-  <input type="button" onclick="executarOperacao(dividir)" value="dividir">
+  <input id="soma" type="button" onclick="executarOperacao(somar)" value="somar">
+  <input id="subtracao" type="button" onclick="executarOperacao(subtrair)" value="subtrair">
+  <input id="multiplicacao" type="button" onclick="executarOperacao(multiplicar)" value="multiplicar">
+  <input id="divisao" type="button" onclick="executarOperacao(dividir)" value="dividir">
 
   <script>
 
     function somar(n1, n2){
       return n1 + n2
+    
     }
 
     function subtrair(n1, n2){
@@ -56,6 +58,26 @@
       }
     }
 
+    //Searching the id of the active element
+    document.querySelectorAll("input").forEach(function(input){
+      input.addEventListener("click", function(event){
+        const el = event.target
+        const id = el.id;
+
+        if (id == 'soma'){
+          document.getElementById('sinal').innerHTML = ' + ';
+        }
+        else if (id == 'subtracao'){
+          document.getElementById('sinal').innerHTML = ' - ';
+        }
+        else if (id == 'multiplicacao'){
+          document.getElementById('sinal').innerHTML = ' * ';
+        }
+        else {
+          document.getElementById('sinal').innerHTML = ' / ';
+        }
+      })
+    })
 
   </script>
 </body>
