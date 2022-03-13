@@ -57,6 +57,53 @@ function validateInterval(){
 }
   
 
+// ATV4
+function checarGanho(){
+  let salario = parseFloat(document.getElementById('salario').value)
+  let percentual;
+
+  if (salario >=0 && salario <= 400){
+    percentual = 15/100
+    calcSalario()
+  } 
+
+  else if (salario >=400.01 && salario <= 800){
+    percentual = (12/100);
+    calcSalario()
+  }
+  else if (salario >=800.01 && salario <= 1200){
+    percentual = (10/100);
+    calcSalario()
+  }
+  else if (salario >=1200.01 && salario <= 2000){
+    percentual = (7/100);
+    calcSalario()
+  }
+  else if (salario > 2000){
+    percentual = (4/100);
+    calcSalario()
+  }
+
+  function calcSalario(){
+    let ganho = salario * percentual 
+    let novoSalario = salario + ganho
+
+    document.getElementById('novo_salario').innerHTML = novoSalario
+  
+    document.getElementById('ganho').innerHTML = ganho
+  
+    document.getElementById('percentual').innerHTML = percentual
+  }
+}
+
+
+// ATV5
+
+
+
+
+    
+  
 
 
 

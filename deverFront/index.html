@@ -89,10 +89,10 @@
             <h1>Questã 04:<span> Aumento de Salário <a
                         href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1048"
                         target="_blank">detalhar</a></span></h1>
-            <p id="">Resultado: Novo salario: xx.xx, Ganho: xx.xx, Percentual: xx%</p>
+            <p>Resultado: Novo salario:<span id="novo_salario">xx.xx</span> , Ganho: <span id="ganho">xx.xx</span> , Percentual: <span id="percentual">xx%</span> </p>
             <label for="">Salário atual:</label>
-            <input type="text" id="">
-            <input type="button" value="Calcular">
+            <input type="text" id="salario">
+            <input onclick="checarGanho()" type="button" value="Calcular">
         </div>
         <div class="questao">
             <h1>Questã 05:<span> Imposto de Renda <a
