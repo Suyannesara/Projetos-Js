@@ -98,32 +98,32 @@
             <h1>Questã 05:<span> Imposto de Renda <a
                         href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1051"
                         target="_blank">detalhar</a></span></h1>
-            <p id="">Resultado:Imposto xxxxx</p>
+            <p id="">Resultado:Imposto <span id="resultL">xxxxx</span> </p>
             <label for="">Renda:</label>
-            <input type="text" id="">
-            <input type="button" value="Calcular">
+            <input type="text" id="salario_lisarb">
+            <input onclick="calcImposto()" type="button" value="Calcular">
         </div>
         <div class="questao">
             <h1>Questã 06:<span> Calcular o salário de um funcionário <a
                         href="https://www.urionlinejudge.com.br/repository/UOJ_1008.html" target="_blank">detalhar</a></span></h1>
-            <p id="">Resultado: O funcionario xxxxxx vai receber xxx.</p>
+            <p i>Resultado: O funcionario <span id="nome">xxxxxx</span>  vai receber <span id="salario_funcionario">xxx</span> .</p>
             <label for="">Nome Funcionário</label>
-            <input type="text" id="">
+            <input type="text" id="nome_funcionario">
             <label for="">Valor Hora</label>
-            <input type="text" id="">
+            <input type="text" id="preco_hora">
             <label for="">Total de Horas Trabalhado</label>
-            <input type="text" id="">
-            <input type="button" value="Calcular">
+            <input type="text" id="horas">
+            <input onclick="calcFuncionario()" type="button" value="Calcular">
         </div>
         <div class="questao">
             <h1>Questã 07:<span> Calcular o consumo médio de um automóvel <a
                         href="https://www.urionlinejudge.com.br/repository/UOJ_1014.html" target="_blank">detalhar</a></span></h1>
-            <p id="">Resultado: O automóvel fez o consumo médio de xxx.</p>
+            <p id="">Resultado: O automóvel fez o consumo médio de <span id="cons_avarage">xxx</span>. </p>
             <label for="">Distância percorrida</label>
-            <input type="text" id="">
+            <input type="text" id="dt_total">
             <label for="">Combustível gasto</label>
-            <input type="text" id="">
-            <input type="button" value="Calcular">
+            <input type="text" id="comb_total">
+            <input onclick="calcConsAvarage()" type="button" value="Calcular">
         </div>
     </div>
 

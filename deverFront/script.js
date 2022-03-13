@@ -12,7 +12,7 @@ function calcMedia(){
   
 
   //Replacing content
-  document.getElementById("media").innerHTML = media;
+  document.getElementById("media").innerHTML = media.toFixed(1);
 }
 
 //ATV2
@@ -35,25 +35,24 @@ function validateInterval(){
 
   //Checking interval
   if (number >=0 && number <= 25){
-    document.getElementById('value_result').innerHTML = 	
-    "Intervalo [0,25]"
+    changeContent("Intervalo [0,25]")	
   }
   else if(number >=26 && number <= 50){
-    document.getElementById('value_result').innerHTML = 	
-    "Intervalo (25,50]"
+    changeContent("Intervalo (25,50]") 	
   }
   else if(number >=51 && number <= 75){
-    document.getElementById('value_result').innerHTML = 	
-    "Intervalo [50,75]"
+    changeContent("Intervalo [50,75]")	
   }
   else if(number >=76 && number <= 100){
-    document.getElementById('value_result').innerHTML = 	
-    "Intervalo (75,100]"
+    changeContent("Intervalo (75,100]")
   }
   else{
-    document.getElementById('value_result').innerHTML = "Fora de Intervalo"
+     changeContent("Fora de Intervalo")
   }
-  
+
+  function changeContent(content){
+    document.getElementById('value_result').innerHTML = content
+  }
 }
   
 
@@ -88,9 +87,9 @@ function checarGanho(){
     let ganho = salario * percentual 
     let novoSalario = salario + ganho
 
-    document.getElementById('novo_salario').innerHTML = novoSalario
+    document.getElementById('novo_salario').innerHTML = novoSalario.toFixed(2)
   
-    document.getElementById('ganho').innerHTML = ganho
+    document.getElementById('ganho').innerHTML = ganho.toFixed(2)
   
     document.getElementById('percentual').innerHTML = percentual
   }
@@ -98,12 +97,65 @@ function checarGanho(){
 
 
 // ATV5
+function calcImposto(){
+  let salarioL = parseFloat(document.getElementById('salario_lisarb').value)
+  let percentual;
+
+  if (salarioL >=0 && salarioL <= 2000){
+    document.getElementById('resultL').innerHTML = "Isento"
+  } 
+  else if (salarioL >2000.00 && salarioL <= 3000){
+    percentualL = 8/100
+    showResult()
+  } 
+  else if (salarioL >3000.00 && salarioL <= 4500){
+    percentualL = 18/100
+    showResult()
+  } 
+  else if (salarioL > 4500.00){
+    percentualL = 28/100
+    showResult()
+  } 
+
+  function showResult(){
+    let imposto = salarioL * percentualL
+
+    document.getElementById('resultL').innerHTML = imposto
+  }
+
+}
 
 
+//ATV6
+function calcFuncionario(){
+  //Getting values
+  let nome = document.getElementById('nome_funcionario').value;
+  let preco_hora = parseFloat(document.getElementById('preco_hora').value);
+  let horas = parseFloat(document.getElementById('horas').value);
+
+  //Calculating salary
+  let salario_funcionario = preco_hora * horas
+
+  //Replacing numbers
+  document.getElementById('nome').innerHTML = nome
+  document.getElementById('salario_funcionario').innerHTML = salario_funcionario
+
+}
 
 
-    
-  
+//ATV5
+
+//Getting values
+function calcConsAvarage(){
+  dt_total = parseFloat(document.getElementById('dt_total').value);
+
+  comb_total = parseFloat(document.getElementById('comb_total').value);
+
+  cons_avarage = dt_total / comb_total
+
+  document.getElementById('cons_avarage').innerHTML = cons_avarage.toFixed(3)
+}
+
 
 
 
